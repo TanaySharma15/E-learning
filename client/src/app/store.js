@@ -7,7 +7,6 @@ export const appStore = configureStore({
     middleware: (defaultMiddleware) => defaultMiddleware().concat(authApi.middleware, courseApi.middleware)
 })
 
-//on refresh user data redux toolkit se chala ja raha tha to do kaam kar sakte hai -> persist user khud se try karna
 
 const initializeApp = async () => {
     await appStore.dispatch(authApi.endpoints.loadUser.initiate({}, { forceRefetch: true }))

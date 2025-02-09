@@ -35,7 +35,7 @@ export const courseApi = createApi({
             providesTags: ['Refetch_Creator_Course']
         }),
         editCourse: builder.mutation({
-            query: ({ formData, courseId }) => ({  //ek se zyada hota hai to {}me daal dete hai
+            query: ({ formData, courseId }) => ({  //ek se zyada hota hai to {} me daal dete hai
                 url: `/${courseId}`,
                 method: "PUT",
                 body: formData
